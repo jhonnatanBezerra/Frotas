@@ -91,30 +91,20 @@
 	                    </tr>
 	                    </thead>
 	                    <tbody>
-	                    <tr>
-	                        <td>1</td>
-	                        <td>Automóvel</td>	                        
+	                    <tr th:each="categoria : ${categorias}">
+	                        <td th:text="${categoria.id}">1</td>
+	                        <td th:text="${categoria.categoria}">Automóvel</td>	 
+	                                               
 	                        <td colspan="2">
-	                            <a class="btn btn-info btn-sm" href="/veiculo/editar/1" role="button">
+	                            <a class="btn btn-info btn-sm" 
+	                               th:href="@{/veiculo/editar/{id} (id=${categoria.id}) }" role="button">
 	                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
 	                            </a>
 	                            <button type="button" class="btn btn-danger btn-sm" >
 	                                <span class="oi oi-circle-x" title="Exclusão desabilitada" aria-hidden="true"></span>
 	                            </button>
 	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <td>2</td>
-	                        <td>Camionete</td>	                        
-	                        <td colspan="2">
-	                            <a class="btn btn-info btn-sm" href="/veiculo/editar/2" role="button">
-	                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
-	                            </a>
-	                            <button type="button" class="btn btn-danger btn-sm" >
-	                                <span class="oi oi-circle-x" title="Exclusão desabilitada" aria-hidden="true"></span>
-	                            </button>
-	                        </td>
-	                    </tr>	                    
+	                    </tr>	                    	                    
 	                    </tbody>
 	                </table>
 	            </div>
