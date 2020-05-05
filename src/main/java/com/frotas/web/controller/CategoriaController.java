@@ -51,4 +51,17 @@ public class CategoriaController {
 		return "redirect:/veiculo/cadastrar";
 	}
 	
+	@GetMapping("/excluir/{id}")
+	public String excluir(@PathVariable("id")Long id, ModelMap model) {
+		
+		if(service.categoriaTemVeiculo(id)) {
+			model.addAttribute("fail", "A categoria não pode ser removida, pois a veículo relacionada");
+		}else {
+			service.delete(id); 
+			model.addAttribute("success", "Categoria removida com sucesso!");
+		}	
+		
+		return listar(model);
+	}
+	
 }

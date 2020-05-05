@@ -12,4 +12,6 @@ public interface CategoriaService {
 	Categoria findById(Long id);
 	List<Categoria> findAll();
 	
+	boolean categoriaTemVeiculo(Long id);
+	
 }

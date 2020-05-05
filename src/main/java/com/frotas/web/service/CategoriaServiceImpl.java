@@ -39,6 +39,14 @@ public class CategoriaServiceImpl implements CategoriaService{
 	public List<Categoria> findAll() {
 		return dao.findAll();
 	}
+
+	@Override
+	public boolean categoriaTemVeiculo(Long id) {
+		if(findById(id).getVeiculos().isEmpty()) {
+			return false; // nao tem veiculo
+		}
+		return true; // tem veiculo
+	}
 	
 	
 }
