@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.frotas.web.dao.CategoriaDao;
 import com.frotas.web.domain.Categoria;
+import com.frotas.web.repository.CategoriaDao;
 
 @Service @Transactional(readOnly = false)
 public class CategoriaServiceImpl implements CategoriaService{

@@ -18,6 +18,9 @@ public class Combustivel extends AbstractEntity<Long>{
 	@OneToMany(mappedBy = "tipoCombustivel")
 	private List<Veiculo> veiculos;
 
+	// ##########geters e setters ##############
+	
+	
 	public String getTipoCombustivel() {
 		return tipoCombustivel;
 	}

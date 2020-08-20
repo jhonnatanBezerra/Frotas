@@ -1,4 +1,4 @@
-package com.frotas.web.dao;
+package com.frotas.web.repository;
 
 import org.springframework.stereotype.Repository;
 

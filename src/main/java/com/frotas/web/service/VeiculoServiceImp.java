@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.frotas.web.dao.VeiculoDao;
 import com.frotas.web.domain.Veiculo;
+import com.frotas.web.repository.VeiculoDao;
 
 @Service @Transactional(readOnly = false)
 public class VeiculoServiceImp implements VeiculoService{
